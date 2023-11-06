@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Text Shadow Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3 class="container">
+        Click the letters!</h3>
+        <div class="word">
+          <span>M</span>
+          <span>E</span>
+          <span>R </span>
+          <span>R</span>
+          <span>Y&#160;&#160;</span>
+          <span>C</span>
+          <span>H </span>
+          <span>R</span>
+          <span>I</span>
+          <span>S</span>
+          <span>T</span>
+          <span>M</span>
+          <span>A</span>
+          <span>S</span>
+        </div>
+    
+        <script>
+          const spans = document.
+        querySelectorAll(".word span");
+    
+          spans.forEach((span, idx) => {
+            span.addEventListener("click", (e) => {
+              e.target.classList.add
+        ("active");
+            });
+            span.addEventListener
+        ("animationend", (e) => {
+              e.target.classList.remove("active");
+            });
+    
+         
+            setTimeout(() => {
+      span.classList.add("active");
+            }, 750 * (idx + 1));
+          });
+        </script>
+    
+</body>
+</html>
